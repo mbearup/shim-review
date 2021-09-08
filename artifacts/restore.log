@@ -1,0 +1,213 @@
+DEBUG:root:
+DEBUG:root:
+DEBUG:root:Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  graphviz procmail
+The following NEW packages will be installed:
+  quilt
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 318 kB of archives.
+After this operation, 804 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian buster/main amd64 quilt all 0.65-3 [318 kB]
+Fetched 318 kB in 0s (15.0 MB/s)
+Selecting previously unselected package quilt.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 28652 files and directories currently installed.)
+Preparing to unpack .../archives/quilt_0.65-3_all.deb ...
+Unpacking quilt (0.65-3) ...
+Setting up quilt (0.65-3) ...
+Processing triggers for man-db (2.8.5-2) ...
+
+DEBUG:root:
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+
+DEBUG:root:All packages are up to date.
+
+DEBUG:root:
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+DEBUG:root:Package grub-efi-amd64-bin is incompatible with build_image default. Will not build it.
+DEBUG:root:Package grub-efi-amd64-signed is incompatible with build_image default. Will not build it.
+INFO:root:Package shim-unsigned is not in the repo. Will build it.
+INFO:root:Identified 1 packages to build
+INFO:root:Restoring shim-unsigned to /source/packagebuilder/src/shim-unsigned
+DEBUG:root:Reading package lists...
+Picking 'shim' as source package instead of 'shim-unsigned'
+NOTICE: 'shim' packaging is maintained in the 'Git' version control system at:
+https://salsa.debian.org/efi-team/shim.git
+Please use:
+git clone https://salsa.debian.org/efi-team/shim.git
+to retrieve the latest (possibly unreleased) updates to the package.
+Need to get 1295 kB of source archives.
+Get:1 http://deb.debian.org/debian buster/main shim 15.4-5~deb10u1 (dsc) [2311 B]
+Get:2 http://deb.debian.org/debian buster/main shim 15.4-5~deb10u1 (tar) [1260 kB]
+Get:3 http://deb.debian.org/debian buster/main shim 15.4-5~deb10u1 (diff) [32.1 kB]
+dpkg-source: info: extracting shim in shim-15.4
+dpkg-source: info: unpacking shim_15.4.orig.tar.bz2
+dpkg-source: info: unpacking shim_15.4-5~deb10u1.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying fix-import_one_mok_state.patch
+dpkg-source: info: applying fix-broken-ia32-reloc.patch
+dpkg-source: info: applying MOK-BootServicesData.patch
+dpkg-source: info: applying Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch
+Fetched 1295 kB in 0s (2791 kB/s)
+
+DEBUG:root:
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+W: Download is performed unsandboxed as root as file 'shim_15.4-5~deb10u1.dsc' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+
+INFO:root:Applying patch for shim-unsigned
+DEBUG:root:Removing patch debian/patches/Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch
+Restoring mok.c
+
+Removing patch debian/patches/MOK-BootServicesData.patch
+Restoring mok.c
+
+Removing patch debian/patches/fix-broken-ia32-reloc.patch
+Restoring elf_ia32_efi.lds
+
+Removing patch debian/patches/fix-import_one_mok_state.patch
+Restoring mok.c
+
+No patches applied
+
+DEBUG:root:
+DEBUG:root:Applying patch debian/patches/fix-import_one_mok_state.patch
+patching file mok.c
+
+Applying patch debian/patches/fix-broken-ia32-reloc.patch
+patching file elf_ia32_efi.lds
+
+Applying patch debian/patches/MOK-BootServicesData.patch
+patching file mok.c
+
+Applying patch debian/patches/Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch
+patching file mok.c
+
+Applying patch debian/patches/cbld.patch
+patching file debian/cbld-uefi-ca.pem
+patching file debian/cbld-dbx.hashes
+patching file debian/rules
+patching file debian/sbat.cbld.csv.in
+
+Now at patch debian/patches/cbld.patch
+
+DEBUG:root:
+INFO:root:Fetching build dependencies for shim-unsigned
+DEBUG:root:Reading package lists...
+Picking 'shim' as source package instead of 'shim-unsigned'
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  coolkey dos2unix libckyapplet1 libefivar1 libelf-dev libnspr4 libnss3
+  libnss3-tools libpcsclite1 libpopt0 opensc opensc-pkcs11 pesign sbsigntool
+  xxd zlib1g-dev
+0 upgraded, 16 newly installed, 0 to remove and 0 not upgraded.
+Need to get 4511 kB of archives.
+After this operation, 16.8 MB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian buster/main amd64 libckyapplet1 amd64 1.1.0-13+b1 [24.3 kB]
+Get:2 http://deb.debian.org/debian buster/main amd64 libpcsclite1 amd64 1.8.24-1 [58.5 kB]
+Get:3 http://deb.debian.org/debian buster/main amd64 coolkey amd64 1.1.0-13+b1 [85.9 kB]
+Get:4 http://deb.debian.org/debian buster/main amd64 dos2unix amd64 7.4.0-1 [391 kB]
+Get:5 http://deb.debian.org/debian buster/main amd64 libefivar1 amd64 37-2+deb10u1 [46.6 kB]
+Get:6 http://deb.debian.org/debian buster/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-1 [214 kB]
+Get:7 http://deb.debian.org/debian buster/main amd64 libelf-dev amd64 0.176-1.1 [72.1 kB]
+Get:8 http://deb.debian.org/debian buster/main amd64 libnspr4 amd64 2:4.20-1 [112 kB]
+Get:9 http://deb.debian.org/debian buster/main amd64 libnss3 amd64 2:3.42.1-1+deb10u3 [1159 kB]
+Get:10 http://deb.debian.org/debian buster/main amd64 libnss3-tools amd64 2:3.42.1-1+deb10u3 [870 kB]
+Get:11 http://deb.debian.org/debian buster/main amd64 libpopt0 amd64 1.16-12 [49.4 kB]
+Get:12 http://deb.debian.org/debian buster/main amd64 opensc-pkcs11 amd64 0.19.0-1 [826 kB]
+Get:13 http://deb.debian.org/debian buster/main amd64 opensc amd64 0.19.0-1 [305 kB]
+Get:14 http://deb.debian.org/debian buster/main amd64 pesign amd64 0.112-5 [94.0 kB]
+Get:15 http://deb.debian.org/debian buster/main amd64 sbsigntool amd64 0.9.2-2 [63.5 kB]
+Get:16 http://deb.debian.org/debian buster/main amd64 xxd amd64 2:8.1.0875-5 [140 kB]
+Fetched 4511 kB in 1s (5401 kB/s)
+Selecting previously unselected package libckyapplet1.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 28733 files and directories currently installed.)
+Preparing to unpack .../00-libckyapplet1_1.1.0-13+b1_amd64.deb ...
+Unpacking libckyapplet1 (1.1.0-13+b1) ...
+Selecting previously unselected package libpcsclite1:amd64.
+Preparing to unpack .../01-libpcsclite1_1.8.24-1_amd64.deb ...
+Unpacking libpcsclite1:amd64 (1.8.24-1) ...
+Selecting previously unselected package coolkey.
+Preparing to unpack .../02-coolkey_1.1.0-13+b1_amd64.deb ...
+Unpacking coolkey (1.1.0-13+b1) ...
+Selecting previously unselected package dos2unix.
+Preparing to unpack .../03-dos2unix_7.4.0-1_amd64.deb ...
+Unpacking dos2unix (7.4.0-1) ...
+Selecting previously unselected package libefivar1:amd64.
+Preparing to unpack .../04-libefivar1_37-2+deb10u1_amd64.deb ...
+Unpacking libefivar1:amd64 (37-2+deb10u1) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../05-zlib1g-dev_1%3a1.2.11.dfsg-1_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-1) ...
+Selecting previously unselected package libelf-dev:amd64.
+Preparing to unpack .../06-libelf-dev_0.176-1.1_amd64.deb ...
+Unpacking libelf-dev:amd64 (0.176-1.1) ...
+Selecting previously unselected package libnspr4:amd64.
+Preparing to unpack .../07-libnspr4_2%3a4.20-1_amd64.deb ...
+Unpacking libnspr4:amd64 (2:4.20-1) ...
+Selecting previously unselected package libnss3:amd64.
+Preparing to unpack .../08-libnss3_2%3a3.42.1-1+deb10u3_amd64.deb ...
+Unpacking libnss3:amd64 (2:3.42.1-1+deb10u3) ...
+Selecting previously unselected package libnss3-tools.
+Preparing to unpack .../09-libnss3-tools_2%3a3.42.1-1+deb10u3_amd64.deb ...
+Unpacking libnss3-tools (2:3.42.1-1+deb10u3) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../10-libpopt0_1.16-12_amd64.deb ...
+Unpacking libpopt0:amd64 (1.16-12) ...
+Selecting previously unselected package opensc-pkcs11:amd64.
+Preparing to unpack .../11-opensc-pkcs11_0.19.0-1_amd64.deb ...
+Unpacking opensc-pkcs11:amd64 (0.19.0-1) ...
+Selecting previously unselected package opensc.
+Preparing to unpack .../12-opensc_0.19.0-1_amd64.deb ...
+Unpacking opensc (0.19.0-1) ...
+Selecting previously unselected package pesign.
+Preparing to unpack .../13-pesign_0.112-5_amd64.deb ...
+Unpacking pesign (0.112-5) ...
+Selecting previously unselected package sbsigntool.
+Preparing to unpack .../14-sbsigntool_0.9.2-2_amd64.deb ...
+Unpacking sbsigntool (0.9.2-2) ...
+Selecting previously unselected package xxd.
+Preparing to unpack .../15-xxd_2%3a8.1.0875-5_amd64.deb ...
+Unpacking xxd (2:8.1.0875-5) ...
+Setting up libckyapplet1 (1.1.0-13+b1) ...
+Setting up xxd (2:8.1.0875-5) ...
+Setting up opensc-pkcs11:amd64 (0.19.0-1) ...
+Setting up libnspr4:amd64 (2:4.20-1) ...
+Setting up libpcsclite1:amd64 (1.8.24-1) ...
+Setting up zlib1g-dev:amd64 (1:1.2.11.dfsg-1) ...
+Setting up libefivar1:amd64 (37-2+deb10u1) ...
+Setting up dos2unix (7.4.0-1) ...
+Setting up sbsigntool (0.9.2-2) ...
+Setting up libpopt0:amd64 (1.16-12) ...
+Setting up opensc (0.19.0-1) ...
+Setting up libnss3:amd64 (2:3.42.1-1+deb10u3) ...
+Setting up coolkey (1.1.0-13+b1) ...
+Setting up libelf-dev:amd64 (0.176-1.1) ...
+Setting up libnss3-tools (2:3.42.1-1+deb10u3) ...
+Setting up pesign (0.112-5) ...
+Processing triggers for mime-support (3.62) ...
+Processing triggers for libc-bin (2.28-10) ...
+Processing triggers for man-db (2.8.5-2) ...
+
+DEBUG:root:debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+
+INFO:root:Finished restoring all packages
