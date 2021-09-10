@@ -39,6 +39,7 @@ Who is the primary contact for security updates, etc.
 - Position: Lead Software Developer
 - Email address: mbearup@microsoft.com
 - PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the Linux community:
+artifacts/mbearup.pub
 
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
@@ -47,6 +48,7 @@ Who is the secondary contact for security updates, etc.
 - Position: Software Developer
 - Email address: ksstanoj@microsoft.com
 - PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the Linux community:
+artifacts/ksstanoj.pub
 
 -------------------------------------------------------------------------------
 Please create your shim binaries starting with the 15.4 shim release tar file:
